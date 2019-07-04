@@ -68,13 +68,3 @@ body {
   85% {top: 5px; transform: scale(1, 1); }
   100% {top: 0px; transform: scale(1, 1); }
 }
-
-@keyframes spinner {
-    0% {top: 0px; transform: scale(1, 1); }
-    15% {top: 5px; transform: scale(1, 1); }
-    30% {top: 20px; transform: scale(1, 1); }
-    50% {top: 40px; transform: scale(2, 1); }
-    70% {top: 20px; transform: scale(1, 1); }
-    85% {top: 5px; transform: scale(1, 1); }
-    100% {top: 0px; transform: scale(1, 1); }
-  }
