@@ -11,8 +11,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 610px;
+}
+
 .wrapper > div {
-    background: #f3b358;
     width: 200px;
     height: 200px;
     display: inline-block;
@@ -23,10 +28,53 @@ body {
     align-items: center;
     justify-content: center;
 }
-.wrapper .ball-bounce {}
-.wrapper .circle-loader {}
+
+.wrapper .ball-bounce div {
+    margin: 0 auto;
+    padding-top: 35px;
+    position: relative;
+}
+
+.wrapper .ball-bounce div::before {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    content: '';
+    animation: ball-bounce 1s infinite;
+}
+.wrapper .circle-loader {
+    border: 2px dotted #fff;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
 .wrapper .pulsing {}
 .wrapper .equalizer {}
 .wrapper .newton-loader {}
 .wrapper .spinner {}
 
+
+
+@keyframes ball-bounce {
+  0% {top: 0px; transform: scale(1, 1); }
+  15% {top: 5px; transform: scale(1, 1); }
+  30% {top: 20px; transform: scale(1, 1); }
+  50% {top: 40px; transform: scale(1.9, 0.5); }
+  70% {top: 20px; transform: scale(1, 1); }
+  85% {top: 5px; transform: scale(1, 1); }
+  100% {top: 0px; transform: scale(1, 1); }
+}
+
+@keyframes spinner {
+    0% {top: 0px; transform: scale(1, 1); }
+    15% {top: 5px; transform: scale(1, 1); }
+    30% {top: 20px; transform: scale(1, 1); }
+    50% {top: 40px; transform: scale(2, 1); }
+    70% {top: 20px; transform: scale(1, 1); }
+    85% {top: 5px; transform: scale(1, 1); }
+    100% {top: 0px; transform: scale(1, 1); }
+  }
